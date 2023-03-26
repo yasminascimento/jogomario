@@ -14,6 +14,18 @@ position: relative; /* para que os elementos não se sobreponham*/
 overflow: hidden; /* overflow cortado e o restante do conteúdo ficará cortado/ quando sai do palco ele fica invisivel*/
 background: linear-gradient(#87CEEB, #E0F6FF);
 
+}
+
+.obstaculo{
+
+    position: absolute; /* ficará em uma posição fixa na pagina*/
+    bottom: 0;
+    width: 80px; 
+    right: 0; /* vai começar na posição 0 do lado direito/ cano vai andar da esquerda para direita*/
+    animation: obstaculo-animation 2s infinite linear;  /* velocidade (2s) e o padrão da animação (linear), e o tempo de duração
+    (infinit)*/
+    
+    
 @keyframes obstaculo-animation
     
 {
@@ -25,22 +37,7 @@ background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
 
-.obstaculo{
-
-position: absolute; /* ficará em uma posição fixa na pagina*/
-bottom: 0;
-width: 80px; 
-right: 0; /* vai começar na posição 0 do lado direito/ cano vai andar da esquerda para direita*/
-animation: obstaculo-animation 2s infinite linear;  /* velocidade (2s) e o padrão da animação (linear), e o tempo de duração
-(infinit)*/
-
-}
-@keyframes obstaculo-animation {
-    from {right: 0;
-    right: -80px;}
-    to {right: 100%;}
- }
-    
+ 
 
 .personagem {
 
@@ -64,3 +61,10 @@ bottom: 0px;
 animation: personagem-animation 500ms ease-out; /*realiza a transição lenta apenas no final*/
 
 }
+
+@keyframes obstaculo-animation {
+    from {right: 0;
+    right: -80px;}
+    to {right: 100%;}
+ }
+   
