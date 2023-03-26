@@ -1,5 +1,5 @@
 //keydow- adiciona um evento quando qualquer tecla do teclado seja pressionado
-document.addEventListener('Keydow' , pulo) // escutador de eventos
+//document.addEventListener('Keydow' , pulo) // escutador de eventos
 
 const personagem = document.querySelector('.personagem');
 const obstaculo = document.querySelector('.obstaculo');
@@ -7,10 +7,11 @@ const obstaculo = document.querySelector('.obstaculo');
 
     const pulo =()=>{
         personagem.classList.add('pulo');
-        setTimeout(()=>{}, 500);
+        setTimeout(()=>{mario.classList.remove('pulo');
+    }, 500);
+
         }
 
-document.addEventListener('keydown', pulo);
 
 const loop = setInterval(()=>{
     const obstaculoPosition = obstaculo.offsetLeft;
@@ -19,7 +20,7 @@ const loop = setInterval(()=>{
    /* console.log(personagemPosition);*/
 
 
-   if (canoPosition <= 120 && canoPosition >= 0 && marioPosition < 100) {
+   if (obstaculoPosition <= 120 && obstaculoPosition >= 0 && personagemPosition < 100) {
         obstaculo.style.animation = 'none'; /* paramos a animação do cano */
         obstaculo.style.left = `${obstaculoPosition}px`
         
