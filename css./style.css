@@ -1,0 +1,60 @@
+*{  /* para todas as configurações*/
+padding: 0; /* distancia entre o elemento e as bordas da pagina*/
+margin: 0; /* area da margem nos 4 lados do elemento*/
+box-sizing: border-box;
+}
+
+.jogo{
+
+width: 80%; /*largura*/
+height: 500px; /*altura*/
+border: 15px solid green solid #333;
+margin: 0 auto; /*para ver a área do jogo*/
+position: relative; /* para que os elementos não se sobreponham*/
+overflow: hidden; /* overflow cortado e o restante do conteúdo ficará cortado/ quando sai do palco ele fica invisivel*/
+background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+@keyframes obs-animation
+    
+{
+    from{
+    right: 0}
+    to{ right: 100%;}
+}
+
+    
+    
+.obstaculo{
+
+position: absolute; /* ficará em uma posição fixa na pagina*/
+bottom: 0;
+width: -80px; 
+right: 0; /* vai começar na posição 0 do lado direito/ cano vai andar da esquerda para direita*/
+/*animation: obs-animation 2s infinite linear;  /* velocidade (2s) e o padrão da animação (linear), e o tempo de duração
+(infinit)*/
+
+}
+
+.personagem {
+
+width: 150px;
+position: absolute;
+bottom: 120px;
+}
+
+/*criando o "delay" do pulo*/
+@keyframes personagem-animation {
+    0% {bottom: 0;}
+    40%{bottom: 180px;}
+    50%{bottom: 180px;}
+    60%{bottom: 180px;}
+    100%{bottom: 0;}
+    }
+
+
+    
+.pulo{
+animation: personagem-animation 500ms ease-out; /*realiza a transição lenta apenas no final*/
+
+}
