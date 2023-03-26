@@ -7,7 +7,7 @@ const obstaculo = document.querySelector('.obstaculo');
 
     const pulo =()=>{
         personagem.classList.add('pulo');
-        setTimeout(()=>{mario.classList.remove('pulo');
+        setTimeout(()=>{personagem.classList.remove('pulo');
     }, 500);
 
         }

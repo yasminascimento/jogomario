@@ -13,7 +13,6 @@ margin: 0 auto; /*para ver a área do jogo*/
 position: relative; /* para que os elementos não se sobreponham*/
 overflow: hidden; /* overflow cortado e o restante do conteúdo ficará cortado/ quando sai do palco ele fica invisivel*/
 background: linear-gradient(#87CEEB, #E0F6FF);
-}
 
 @keyframes obstaculo-animation
     
@@ -23,6 +22,8 @@ background: linear-gradient(#87CEEB, #E0F6FF);
     to{ right: 100%;}
 
     }
+}
+
 
 .obstaculo{
 
